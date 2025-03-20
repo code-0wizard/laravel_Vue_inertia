@@ -11,6 +11,7 @@
 
         <div class="space-x-6">
           <Link :href="route('register')" class="text-slate-200 hover:bg-slate-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Register</Link>
+          <Link :href="route('login')" class="text-slate-200 hover:bg-slate-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Login</Link>
         </div>
       </nav>
     </header>
