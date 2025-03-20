@@ -5,6 +5,8 @@
   <div>
     <header class="bg-indigo-500 text-white">
       <nav class="flex items-center justify-between p-4 max-w-screen-lgmx-auto">
+        <h1>{{ $page.props.auth.user }}</h1>
+
         <div class="space-x-6">
           <Link href="/">Home</Link>
           <Link href="/about">About</Link>
