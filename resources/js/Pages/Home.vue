@@ -5,5 +5,6 @@
   <!-- <Head :title="` | ${page.component}`" /> -->
   <Head :title="$page.component" />
   <!-- <h1>{{ $page.props.auth.user }}</h1> -->
-  <Link class="mt-[600px] block" href="/" preserve-scroll>Refresh</Link>
+  <!-- <Link class="mt-[600px] block" href="/" preserve-scroll>Refresh</Link> -->
+  <h1>Home page</h1>
 </template>
