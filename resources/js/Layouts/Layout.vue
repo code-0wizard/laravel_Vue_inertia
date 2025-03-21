@@ -14,7 +14,13 @@
         </div>
 
         <div v-if="$page.props.auth.user" class="space-x-6">
-          <Link :href="route('dashboard')" class="text-slate-200 hover:bg-slate-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Dashboard</Link>
+          <img class="avatar" :src="$page.props.auth.user.avatar? ('storage/' + $page.props.auth.user.avatar) : ('storage/avatars/default.png')" alt="" />
+          <Link 
+            :href="route('dashboard')" 
+            class="text-slate-200 hover:bg-slate-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+            :class="{ 'bg-slate-700': $page.component === 'Dashboard' }">
+            Dashboard
+          </Link>
           <Link :href="route('logout')" method="post" as="button" type="button" class="text-slate-200 hover:bg-slate-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Logout</Link>
         </div>
 

@@ -7,7 +7,12 @@ const form = useForm({
   email: null,
   password: null,
   password_confirmation: null,
+  avatar: null,
 });
+
+const change = (e) => {
+  form.avatar = e.target.files[0];
+};
 
 const submit = () => {
   form.post(route("register"), {
@@ -24,6 +29,12 @@ const submit = () => {
 
   <div class="w-2/4 mx-auto">
     <form @submit.prevent="submit">
+      <div>
+        <label for="avatar">Avatar</label>
+        <input type="file" id="avatar" @input="change" />
+        <p>{{ form.errors.avatar }}</p>
+      </div>
+
       <TextInput 
         name='name' 
         v-model='form.name' 
